@@ -1,0 +1,132 @@
+/*Generales*/
+*{
+    top: 0;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*Inicio del Header*/
+header{
+    width: 100%;
+    height: 90px;
+    background: transparent;
+    position: fixed;
+    transition: all .5s;
+}
+
+.header_abajo{
+    background: beige;
+    box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.7);
+}
+
+.contenedor_logo{
+    float: left;
+    padding: 15px 30px;
+}
+
+.logo{
+    width: 80px;
+    line-height: 50px;
+    border-radius: 10px 30px 5px 30px;
+    box-shadow: .2rem .2rem rgba(0, 0, 0, 0.8);
+}
+
+.checkbtn{
+    color: #fff;
+    float: right;
+    font-size: 40px;
+    padding: 15px 20px;
+    display: none;
+}
+
+.check{
+    visibility: hidden;
+}
+
+.menu{
+    float: right;
+    padding: 15px 20px;
+    line-height: 50px;
+}
+
+.menu li{
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 20px;
+
+}
+
+.menu li a{
+    text-decoration: none;
+    font-family: rubik vinyl;
+    text-shadow: .1rem .1rem .4rem rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border-radius: 10px;
+    transition: .3s;
+}
+
+li a.active, li a:hover{
+    background: rgb(2, 2, 194);
+    color: #fff;
+}
+/*Fin del Header*/
+
+/*Inicio del Body*/
+.contenedor{
+    width: 100%;
+    height: calc(100vh + 200px);
+    background-image: url(/Imagenes/universo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/*Fin del Body*/
+
+/*Diseño para celulares*/
+@media screen and (max-width: 458px) {
+    header{
+        background: #fff;
+        height: 148px;
+    }
+
+    .menu{
+        background: radial-gradient( blue, darkblue);
+        height: calc(100vh + 90px);
+        position: absolute;
+        top: 148px;
+        left: -1000px;
+        transition: all .5s;
+    }
+
+    ul li{
+        display: block;
+        text-align: center;
+    }
+
+    .logo{
+        width: 150px;
+    }
+
+    .check{
+        display: none;
+    }
+
+    .checkbtn{
+        color: #000;
+        display: block;
+        font-size: 80px;
+        cursor: pointer;
+    }
+
+    ul li a{
+        color: #fff;
+    }
+
+    ul li a:hover {
+        background: darkblue;
+    }
+
+    #check:checked ~ ul{
+        left: 0;
+    }
+}
